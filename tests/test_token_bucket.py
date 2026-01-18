@@ -36,3 +36,11 @@ def test_invalid_params() -> None:
         TokenBucket(capacity=0, refill_rate=1)
     with pytest.raises(ValueError):
         TokenBucket(capacity=1, refill_rate=0)
+
+
+def test_request_exceeding_capacity() -> None:
+    bucket = TokenBucket(capacity=5, refill_rate=1)
+    with pytest.raises(ValueError):
+        bucket.try_consume(6)
+    with pytest.raises(ValueError):
+        bucket.time_to_availability(6)
