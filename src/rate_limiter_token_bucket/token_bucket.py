@@ -39,6 +39,8 @@ class TokenBucket:
         """Attempt to consume tokens. Returns True if allowed."""
         if tokens <= 0:
             raise ValueError("tokens must be > 0")
+        if tokens > self.config.capacity:
+            raise ValueError("tokens must be <= capacity")
         with self._lock:
             self._refill_locked()
             if self._tokens >= tokens:
