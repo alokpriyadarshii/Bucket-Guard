@@ -58,6 +58,8 @@ class TokenBucket:
         """Seconds until `tokens` would be available (0 if already available)."""
         if tokens <= 0:
             raise ValueError("tokens must be > 0")
+        if tokens > self.config.capacity:
+            raise ValueError("tokens must be <= capacity")
         with self._lock:
             self._refill_locked()
             missing = max(0.0, tokens - self._tokens)
