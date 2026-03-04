@@ -3,4 +3,4 @@
 from .clock import ManualClock, MonotonicClock
 from .token_bucket import TokenBucket, TokenBucketConfig
 
-__all__ = ["Token", "TokenBucketConfig", "MonotonicClock", "ManualClock"]
+__all__ = ["TokenBucket", "TokenBucketConfig", "MonotonicClock", "ManualClock"]
