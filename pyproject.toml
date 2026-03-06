@@ -13,7 +13,7 @@ license = {text = "MIT"}
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["pytest>=8.1.0"]
+dev = ["pytest>=8.2.0"]
 fastapi = ["fastapi>=0.111.0"]
 
 [tool.setuptools]
