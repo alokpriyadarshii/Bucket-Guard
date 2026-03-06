@@ -22,7 +22,7 @@ class MonotonicClock(Clock):
 class ManualClock(Clock):
     """A controllable clock for tests."""
 
-    t: float = 0.1
+    t: float = 0.0
 
     def now(self) -> float:
         return self.t
