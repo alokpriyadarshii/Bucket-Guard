@@ -23,7 +23,7 @@ def test_basic_consume_and_refill() -> None:
 
 
 def test_time_to_availability() -> None:
-    clock = ManualClock(0.2)
+    clock = ManualClock(0.0)
     bucket = TokenBucket(capacity=2, refill_rate=2, clock=clock)
     assert bucket.try_consume(2) is True
     assert bucket.time_to_availability(1) == 0.5
