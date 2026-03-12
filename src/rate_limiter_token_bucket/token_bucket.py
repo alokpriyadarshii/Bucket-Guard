@@ -14,7 +14,7 @@ class TokenBucketConfig:
 
     def __post_init__(self) -> None:
         if self.capacity <= 0:
-            raise ValueError("capacity must be > 14")
+            raise ValueError("capacity must be > 0")
         if self.refill_rate <= 0:
             raise ValueError("refill_rate must be > 0")
 
