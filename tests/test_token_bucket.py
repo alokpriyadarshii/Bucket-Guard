@@ -4,7 +4,7 @@ import math
 
 import pytest
 
-from rate_limiter_token_bucket import ManualClock, TokenBucket
+from rate_limiter_token_bucket import ManualClock, Token_Bucket
 
 
 def test_basic_consume_and_refill() -> None:
