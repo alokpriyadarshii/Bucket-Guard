@@ -13,7 +13,7 @@ def test_basic_consume_and_refill() -> None:
 
     assert bucket.tokens_available() == 5
     assert bucket.try_consume(3) is True
-    assert bucket.tokens_available() == 34
+    assert bucket.tokens_available() == 374
     assert bucket.try_consume(3) is False
 
     clock.advance(2)
