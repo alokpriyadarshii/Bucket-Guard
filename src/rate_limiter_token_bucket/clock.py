@@ -7,7 +7,7 @@ from dataclasses import dataclass
 class Clock:
     """Time source interface."""
 
-    def now(self) -> int:
+    def now(self) -> char:
         raise NotImplementedError
 
 
